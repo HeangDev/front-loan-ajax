@@ -26,7 +26,7 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .content{@apply pt-[44px] pb-[51px];}
 
 .duration_wrap{@apply pb-[15px];}
-.duration_wrap h3{@apply mt-[10px] mb-[15px] px-[15px] text-[16px] text-[#666];}
+.duration_wrap h3{@apply mt-[10px] mb-[15px] px-[15px] text-[14px] text-[#666];}
 .duration{@apply grid grid-cols-5 gap-[0.64rem] px-[15px];}
 .duration .btn_duration{@apply inline-block rounded-[3px] bg-[#f7f7f7] w-full h-[32px] mr-[.64rem] font-normal text-[12px] text-[#999] text-center leading-[32px];}
 .duration .btn_duration:nth-last-child(1){@apply m-0;}
@@ -38,7 +38,7 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .amount_warp .new_amount{@apply mt-[5px] text-[20px] text-center;}
 
 .total_wrap{@apply flex items-center justify-between border-t border-b border-[#eee] p-[15px];}
-.total_text{@apply h-[16px] text-[16px] text-[#666] leading-[16px];}
+.total_text{@apply h-[16px] text-[14px] text-[#666] leading-[16px];}
 .total_loan .total_sub{@apply ml-[5px] text-[12px] text-[#999];}
 
 .loan_wrap{@apply py-[10px];}
@@ -118,9 +118,9 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .pop_wrap .pop_inn .pop_msg p {@apply text-[14px] font-normal text-[#222] text-center;}
 .pop_wrap .mgbox_inn .pop_footer{@apply p-0;}
 .pop_wrap .pop_footer ul{@apply flex justify-between items-center;}
-.pop_wrap .pop_footer .btn_g50{@apply flex justify-center items-center w-[145px] h-[50px] bg-gray-100 rounded-br-none rounded-tr-none rounded-tl-none rounded-bl-[10px];}
-.pop_wrap .pop_footer .btn_b50{@apply flex justify-center items-center text-white w-[145px] h-[50px] bg-[#355180] rounded-br-[10px] rounded-tr-none rounded-tl-none rounded-bl-none;}
-.pop_wrap .pop_footer .btn_g100{@apply flex justify-center items-center w-full h-[50px] rounded-bl-[10px] rounded-br-[10px] bg-gray-100;}
+.pop_wrap .pop_footer .btn_g50{@apply flex justify-center items-center w-[145px] h-[40px] bg-gray-100 rounded-br-none rounded-tr-none rounded-tl-none rounded-bl-[10px];}
+.pop_wrap .pop_footer .btn_b50{@apply flex justify-center items-center text-white w-[145px] h-[40px] bg-[#355180] rounded-br-[10px] rounded-tr-none rounded-tl-none rounded-bl-none;}
+.pop_wrap .pop_footer .btn_g100{@apply flex justify-center items-center w-full h-[50px] text-[14px] rounded-bl-[10px] rounded-br-[10px] bg-gray-100;}
 
 .frm_upload_wrap{@apply bg-white py-[10px] px-[15px];}
 .file_input{@apply block relative my-0 mx-auto;}

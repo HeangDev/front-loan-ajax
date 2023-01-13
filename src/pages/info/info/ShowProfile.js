@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Header from '../../../components/Header'
 import http from '../../../services/api'
 import { currencyFormat } from '../../../utils/Formatter'
+import { bank } from '../../../data/bank'
 
 const ShowProfile = () => {
     const [currentWork, setCurrentWork] = useState('')
@@ -124,17 +125,17 @@ const ShowProfile = () => {
                         </p>
                         <div className="frm_upload_wrap">
                             <div className="file_input">
-                                <div className="input_show_file"><img src={`/storage/customer/${frontImage}`} alt=""/></div>
+                                <div className="input_show_file"><img src={`https://subadmin.smeservice.net/storage/customer/${frontImage}`} alt=""/></div>
                             </div>
                         </div>
                         <div className="frm_upload_wrap">
                             <div className="file_input">
-                                <div className="input_show_file"><img src={`/storage/customer/${backImage}`} alt=""/></div>
+                                <div className="input_show_file"><img src={`https://subadmin.smeservice.net/storage/customer/${backImage}`} alt=""/></div>
                             </div>
                         </div>
                         <div className="frm_upload_wrap">
                             <div className="file_input">
-                                <div className="input_show_file"><img src={`/storage/customer/${fullImage}`} alt=""/></div>
+                                <div className="input_show_file"><img src={`https://subadmin.smeservice.net/storage/customer/${fullImage}`} alt=""/></div>
                             </div>
                         </div>
                     </div>

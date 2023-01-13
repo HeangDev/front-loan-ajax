@@ -34,7 +34,7 @@ const AddSignature = () => {
                 <form encType="multipart/form-data">
                     <div className="sign_wrap">
                         <SignaturePad canvasProps={{width: 380, height: 200, className: 'sigCanvas'}} ref={sigCanvas}/>
-                        <p className="info">กรุณาลงชื่อด้านบน</p>
+                        <p className="info">กรุณาลงชื่อด้านบน {id_user}</p>
                     </div>
                     <div className="btn_wrap mt-10">
                         <button type="button" className="btn_b40" onClick={handleSignature}>ส่ง</button>

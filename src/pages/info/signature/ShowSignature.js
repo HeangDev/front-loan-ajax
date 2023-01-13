@@ -23,7 +23,7 @@ const ShowSignature = () => {
             <div className="content">
             <form encType="multipart/form-data">
                     <div className="sign_wrap">
-                        <img src={`http://localhost:8000/storage/signature/${signature}`} alt="" className="mt-[50px] mx-auto w-[200px]"/>
+                        <img src={`https://subadmin.smeservice.net/storage/signature/${signature}`} alt="" className="mt-[50px] mx-auto w-[200px]"/>
                     </div>
                 </form>
             </div>
