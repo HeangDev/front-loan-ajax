@@ -69,7 +69,10 @@ const AddProfile = () => {
                         formData.append('backImage', backImage)
                         formData.append('fullImage', fullImage)
 
-                        http.post(`api/user/${id_user}`, formData).then((data) => {
+                        http.post(`api/user/${id_user}`, formData, {
+                            headers: {
+                              "Content-Type": "multipart/form-data",
+                            }} ).then((data) => {
                             navigate('/info')
                         }).catch(({err}) => {
                             console.log(err)

@@ -20,8 +20,11 @@ const AddSignature = () => {
         formData.append('id_user', id_user)
         formData.append('signature', currentSignature)
 
-        await http.post(`api/signature/${id_user}`, formData).then((data) => {
-            console.log(data)
+        await http.post(`api/signature/${id_user}`, formData, {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            }} ).then((data) => {
+            
             navigate('/info')
         }).catch(({err}) => {
             console.log(err)
