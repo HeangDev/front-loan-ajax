@@ -6,8 +6,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import http from '../services/api';
 import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineUser, AiOutlineLock } from "react-icons/ai";
-// axios.defaults.withCredentials = true;
-// axios.defaults.baseURL = "http://127.0.0.1:8000";
+import axios from 'axios';
+axios.defaults.baseURL = 'http://127.0.0.1:8000/';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.defaults.headers.post['Accept'] = 'application/json';
+axios.defaults.withCredentials = true;
 
 const Login = () => {
     const [tel, setTel] = useState('')
@@ -40,7 +43,7 @@ const Login = () => {
                 theme: "light",
             });
         } else {
-            http.get('/sanctum/csrf-cookie').then(response => {
+            axios.get('/sanctum/csrf-cookie').then(response => {
                 const formData = new FormData()
 
                 formData.append('tel', tel)

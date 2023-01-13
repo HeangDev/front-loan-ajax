@@ -12,7 +12,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { currencyFormat } from '../utils/Formatter'
 import http from '../services/api'
-
+import Parser from 'html-react-parser';
 
 const Home = () => {
     const [checked, setChecked] = useState(false);
@@ -298,7 +298,7 @@ const Home = () => {
                                         agreement.map((item, i) => {
                                             return (
                                                 item.status === '1' ? 
-                                                <p key={i}>{item.description}</p>
+                                                <p key={i}>{Parser(item.description)}</p>
                                                 :
                                                 <></>
                                             )

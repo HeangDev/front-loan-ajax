@@ -145,14 +145,10 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .windraw_wrap .input_wrap{@apply px-[15px];}
 .windraw_wrap input{@apply w-full h-[40px] border border-[#eee] rounded-[2px] outline-none px-[13px];}
 
-
 .msg_agg .pop_content{@apply py-[20px];}
 .msg_agg .pop_msg{@apply overflow-y-scroll max-h-[300px] py-[0] !important;}
 .msg_agg .pop_msg p{@apply text-left !important;}
 
-
-
-
-.msg_agg .pop_msg::-webkit-scrollbar{@apply w-[8px];}
+.msg_agg .pop_msg::-webkit-scrollbar{@apply w-[4px];}
 .msg_agg .pop_msg::-webkit-scrollbar-track{@apply bg-transparent;}
 .msg_agg .pop_msg::-webkit-scrollbar-thumb{@apply bg-black/25 rounded-[20px] border-[6px] border-transparent bg-clip-content;}

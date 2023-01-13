@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios';
 import { Routes, Route } from "react-router-dom";
 import PrivateRoutes from './routes/PrivateRoutes'
 import PublicRoute from './routes/PublicRoute'

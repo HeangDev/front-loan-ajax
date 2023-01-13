@@ -23,6 +23,7 @@ const Register = () => {
                     formData.append('tel', tel)
                     formData.append('password', password)
 
+                    http.get('/sanctum/csrf-cookie').then(response => {
                     http.post(`api/register`, formData).then(({data}) => {
                         if (data.status === 200) {
                             http.post('api/login', formData).then(({data}) => {
@@ -36,6 +37,7 @@ const Register = () => {
                     }).catch(({err}) => {
                         console.log(err)
                     })
+                });
                 })}>
                 <div className="frm_wrap">
                     <div className="frm_grp required">
