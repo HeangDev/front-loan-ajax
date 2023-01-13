@@ -124,17 +124,17 @@ const ShowProfile = () => {
                         </p>
                         <div className="frm_upload_wrap">
                             <div className="file_input">
-                                <div className="input_show_file"><img src={`http://localhost:8000/storage/customer/${frontImage}`} alt=""/></div>
+                                <div className="input_show_file"><img src={`/storage/customer/${frontImage}`} alt=""/></div>
                             </div>
                         </div>
                         <div className="frm_upload_wrap">
                             <div className="file_input">
-                                <div className="input_show_file"><img src={`http://localhost:8000/storage/customer/${backImage}`} alt=""/></div>
+                                <div className="input_show_file"><img src={`/storage/customer/${backImage}`} alt=""/></div>
                             </div>
                         </div>
                         <div className="frm_upload_wrap">
                             <div className="file_input">
-                                <div className="input_show_file"><img src={`http://localhost:8000/storage/customer/${fullImage}`} alt=""/></div>
+                                <div className="input_show_file"><img src={`/storage/customer/${fullImage}`} alt=""/></div>
                             </div>
                         </div>
                     </div>

@@ -10,10 +10,7 @@ const AddSignature = () => {
     const id_user = localStorage.getItem('auth_id')
 
     const navigate = useNavigate();
-    let config = {
-        timeout: 1000,
-        headers: {"Content-Type": "multipart/form-data"}
-        };
+   
 
     const handleSignature = async () => {
         const currentSignature = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png")
@@ -24,7 +21,7 @@ const AddSignature = () => {
         formData.append('id_user', id_user)
         formData.append('signature', currentSignature)
 
-        await http.post(`api/signature/${id_user}`, formData, config ).then((data) => {
+        await http.post(`api/signature/${id_user}`, formData).then((data) => {
             navigate('/info')
         }).catch(({err}) => {
             console.log(err)
