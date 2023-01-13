@@ -145,19 +145,23 @@ const AddProfile = () => {
                             <div className="frm_grp">
                                 <label htmlFor="">บัญชีธนาคาร</label>
                                 <select className="combobox" onChange={e => setBankName(e.target.value)}>
-                                    <option value="ธนาคารไทยพาณิชย์ （SCB）">ธนาคารไทยพาณิชย์ （SCB）</option>
-                                    <option value="ธนาคาร กสิกรไทย （KBANK  )">ธนาคาร กสิกรไทย （KBANK  )</option>
-                                    <option value="ธนาคาร กรุงศรีอยุธยา （ BAY )">ธนาคาร กรุงศรีอยุธยา （ BAY )</option>
-                                    <option value="ธนาคาร กรุงไทย （KTB  )">ธนาคาร กรุงไทย （KTB  )</option>
-                                    <option value=" ธนาคาร กรุงเทพ（ BBL )"> ธนาคาร กรุงเทพ（ BBL )</option>
-                                    <option value="ธนาคาร ทหารไทย （TTB )">ธนาคาร ทหารไทย （TTB )</option>
-                                    <option value="ธนาคาร ธนชาติ（ TBANK )">ธนาคาร ธนชาติ（ TBANK )</option>
-                                    <option value="ธนาคาร ออมสิน( GSB)">ธนาคาร ออมสิน( GSB)</option>
-                                    <option value="ธนาคาร ยูโอบี (UOB )">ธนาคาร ยูโอบี (UOB )</option>
-                                    <option value="ธนาคาร ไอซีบีซี( ICBC)">ธนาคาร ไอซีบีซี( ICBC)</option>
-                                    <option value=" ธนาคาร การเกษตรและสหกรณ์ ธ ก ส（BAAC）"> ธนาคาร การเกษตรและสหกรณ์ ธ ก ส（BAAC）</option>                
-                                    <option value="ธนาคาร ซีไอเอ็มบี ไทย(CIMB)">ธนาคาร ซีไอเอ็มบี ไทย(CIMB)</option>
-                                    <option value="ธนาคาร อื่นๆ">ธนาคาร อื่นๆ</option>
+                                    <option value="1">ธนาคารไทยพาณิชย์ （SCB）</option>
+                                    <option value="2">ธนาคาร กสิกรไทย （KBANK)</option>
+                                    <option value="3">ธนาคาร กรุงศรีอยุธยา （BAY)</option>
+                                    <option value="4">ธนาคาร กรุงไทย （KTB)</option>
+                                    <option value="5">ธนาคาร กรุงเทพ（BBL)</option>
+                                    <option value="6">ธนาคารเพื่อการเกษตร ธ ก ส（BAAC）</option>
+                                    <option value="7">ธนาคาร ทหารไทย （TTB)</option>
+                                    <option value="8">ธนาคาร ซีไอเอ็มบี ไทย(CIMB)</option>
+                                    <option value="9">ธนาคาร ยูโอบี (UOB)</option>
+                                    <option value="10">ธนาคาร ออมสิน(GSB)</option>
+                                    <option value="11">ธนาคารแลนด์ แอนด์ เฮ้าส์</option>
+                                    <option value="12">ธนาคาร ธนชาติ（TBANK)</option>
+                                    <option value="13">ธนาคารทิสโก้</option>
+                                    <option value="14">ธนาคารเกียรตินาคิน</option>
+                                    <option value="15">ทรูวอลเล็ท</option>                          
+                                    <option value="16">ธนาคาร ไอซีบีซี(ICBC)</option>             
+                                    
                                 </select>
                             </div>
                             <div className="frm_grp required">

@@ -21,6 +21,7 @@ const AddSignature = () => {
         formData.append('signature', currentSignature)
 
         await http.post(`api/signature/${id_user}`, formData).then((data) => {
+            console.log(data)
             navigate('/info')
         }).catch(({err}) => {
             console.log(err)

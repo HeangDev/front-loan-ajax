@@ -1,13 +1,13 @@
 export const userloan = [
     {
         id: 1,
-        date: '2022-11-16',
+        date: '2023-01-16',
         tel: '083****02',
         amount: '159100'
     },
     {
         id: 2,
-        date: '2022-11-16',
+        date: '2023-01-01',
         tel: '064****93',
         amount: '58600'
     },
