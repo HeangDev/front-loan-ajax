@@ -195,7 +195,6 @@ const Home = () => {
                 formData.append('total', total)
 
                 http.post(`api/loan`, formData).then(({data}) => {
-                    console.log(data)
                     toast.success('คุณสมัครสินเชื่อสำเร็จแล้ว', {
                         position: "top-right",
                         autoClose: 2000,
