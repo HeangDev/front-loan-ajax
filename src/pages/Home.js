@@ -307,7 +307,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="pop_footer">
-                            <button  className="btn_g100" onClick={() => setShowModal(false)}>ยกเลิก</button>
+                            <button  className="btn_g100" onClick={() => setShowModal(false)}>ยอมรับ</button>
                         </div>
                     </div>
                 </div>

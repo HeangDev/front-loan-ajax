@@ -113,7 +113,9 @@ const ShowProfile = () => {
                             <div className="frm_grp">
                                 <label htmlFor="idNumber">เลขประจำตัว</label>
                                 <div className="frm_col">
-                                    <input type="text" readOnly id="idNumber" value={idNumber}/>
+                                    {/* <input type="text" readOnly id="idNumber" value={idNumber}/> */}
+                                    <input type="text" readOnly id="idNumber" value="8888888888888"/>
+
                                 </div>
                             </div>
                         </div>

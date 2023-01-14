@@ -15,7 +15,7 @@ const AddSignature = () => {
     const handleSignature = async () => {
         const currentSignature = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png")
         setSignature(currentSignature)
-        
+        console.log(currentSignature)
         const formData = new FormData()
         formData.append('_method', 'PATCH')
         formData.append('id_user', id_user)
