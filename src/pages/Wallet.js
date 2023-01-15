@@ -96,8 +96,8 @@ const Wallet = () => {
             <div className="banner">
                 <img src={Other_03} alt="" />
             </div>
-            <div className="windraw_wrap">
-                <div className="head_windraw">
+            <div className="withdraw_wrap">
+                <div className="head_withdraw">
                     <div className="left">
                         <h4 className="tit">จำนวนเงินที่ดำเนินการถอน (บาท)</h4>
                         {
@@ -128,7 +128,7 @@ const Wallet = () => {
                     <button className="btn_b100">ยกเลิก</button>
                 </div>
                 </div>
-                <div className="windraw_des">
+                <div className="withdraw_des">
                     <p className="tit_note">สถานะการกู้: {description === 'กำหลังดำเนินการ' ? 'กำหลังดำเนินการ' : description }</p>
                     <p>คำเตือน:<br /></p>
                     <p className="txt_note">

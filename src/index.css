@@ -120,7 +120,7 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .pop_wrap .pop_footer ul{@apply flex justify-between items-center;}
 .pop_wrap .pop_footer .btn_g50{@apply flex justify-center items-center w-[145px] h-[40px] bg-gray-100 rounded-br-none rounded-tr-none rounded-tl-none rounded-bl-[10px];}
 .pop_wrap .pop_footer .btn_b50{@apply flex justify-center items-center text-white w-[145px] h-[40px] bg-[#355180] rounded-br-[10px] rounded-tr-none rounded-tl-none rounded-bl-none;}
-.pop_wrap .pop_footer .btn_g100{@apply flex justify-center items-center w-full h-[50px] text-[14px] rounded-bl-[10px] rounded-br-[10px] bg-gray-100;}
+.pop_wrap .pop_footer .btn_g100{@apply flex justify-center items-center  text-white w-full h-[35px] text-[14px] rounded-bl-[10px] rounded-br-[10px] bg-[#355180];}
 
 .frm_upload_wrap{@apply bg-white py-[10px] px-[15px];}
 .file_input{@apply block relative my-0 mx-auto;}
@@ -130,20 +130,20 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 
 .txt_link{@apply text-[#355180] cursor-pointer;}
 
-.head_windraw{@apply flex items-start justify-between py-[10px] px-[15px];}
-.head_windraw .right{@apply w-[50%] border-l border-[#f7f7f7] pl-[10px];}
-.head_windraw .left{@apply w-[50%] pr-[10px];}
-.head_windraw .tit{@apply text-[14px] font-medium text-[#333] text-ellipsis whitespace-nowrap overflow-hidden w-[98%];}
-.head_windraw .des{@apply text-[17px] font-semibold text-orange-500;}
-.windraw_des {@apply w-full py-[10px] px-[15px];}
-.windraw_des .tit_note{@apply text-center text-red-500}
-.windraw_des p{@apply text-center text-gray-400;}
-.windraw_des .txt_note{@apply flex justify-between}
-.windraw_des p img{@apply flex justify-start h-[28px] w-[30px] ml-[5px];}
-.windraw_des p span{@apply font-[11px];}
-.windraw_wrap .btn_wrap{@apply flex-row flex-nowrap;}
-.windraw_wrap .input_wrap{@apply px-[15px];}
-.windraw_wrap input{@apply w-full h-[40px] border border-[#eee] rounded-[2px] outline-none px-[13px];}
+.head_withdraw{@apply flex items-start justify-between py-[10px] px-[15px];}
+.head_withdraw .right{@apply w-[50%] border-l border-[#f7f7f7] pl-[10px];}
+.head_withdraw .left{@apply w-[50%] pr-[10px];}
+.head_withdraw .tit{@apply text-[14px] font-medium text-[#333] text-ellipsis whitespace-nowrap overflow-hidden w-[98%];}
+.head_withdraw .des{@apply text-[17px] font-semibold text-orange-500;}
+.withdraw_des {@apply w-full py-[10px] px-[15px];}
+.withdraw_des .tit_note{@apply text-center text-red-500}
+.withdraw_des p{@apply text-center text-gray-400;}
+.withdraw_des .txt_note{@apply flex justify-between}
+.withdraw_des p img{@apply flex justify-start h-[28px] w-[30px] ml-[5px];}
+.withdraw_des p span{@apply font-[11px];}
+.withdraw_wrap .btn_wrap{@apply flex-row flex-nowrap;}
+.withdraw_wrap .input_wrap{@apply px-[15px];}
+.withdraw_wrap input{@apply w-full h-[40px] border border-[#eee] rounded-[2px] outline-none px-[13px];}
 
 .msg_agg .pop_content{@apply py-[20px];}
 .msg_agg .pop_msg{@apply overflow-y-scroll max-h-[300px] py-[0] !important;}
@@ -152,3 +152,10 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .msg_agg .pop_msg::-webkit-scrollbar{@apply w-[4px];}
 .msg_agg .pop_msg::-webkit-scrollbar-track{@apply bg-transparent;}
 .msg_agg .pop_msg::-webkit-scrollbar-thumb{@apply bg-black/25 rounded-[20px] border-[6px] border-transparent bg-clip-content;}
+
+.text_head_loan{@apply py-[10px] text-[12px];}
+.loan_des{@apply w-full py-[10px] px-[15px];}
+.loan_des .tit_note{@apply text-center text-red-500}
+.loan_des p{@apply text-center text-gray-400;}
+.loan_des .txt_note{@apply flex justify-between}
+.loan_des p span{@apply font-[11px];}

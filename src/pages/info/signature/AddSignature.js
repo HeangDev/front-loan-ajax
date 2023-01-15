@@ -8,10 +8,8 @@ const AddSignature = () => {
     const [signature, setSignature] = useState()
     const sigCanvas = useRef({})
     const id_user = localStorage.getItem('auth_id')
-
     const navigate = useNavigate();
-   
-
+    
     const handleSignature = async () => {
         const currentSignature = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png")
         setSignature(currentSignature)
@@ -34,7 +32,7 @@ const AddSignature = () => {
                 <form encType="multipart/form-data">
                     <div className="sign_wrap">
                         <SignaturePad canvasProps={{width: 380, height: 200, className: 'sigCanvas'}} ref={sigCanvas}/>
-                        <p className="info">กรุณาลงชื่อด้านบน {id_user}</p>
+                        <p className="info">กรุณาลงชื่อด้านบน</p>
                     </div>
                     <div className="btn_wrap mt-10">
                         <button type="button" className="btn_b40" onClick={handleSignature}>ส่ง</button>
