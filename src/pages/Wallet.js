@@ -11,6 +11,11 @@ const Wallet = () => {
     const [code, setCode] = useState()
     const [description, setDescription] = useState()
     const [withdrawCode, setWithdrawCode] = useState('')
+
+    const [withdrawAmount, setWithdrawAmount] = useState()
+    const [withdCode, setWithdCode] = useState()
+    const [withdrawStatus, setWithdrawStatus] = useState()
+
     const id = localStorage.getItem('auth_id')
 
     const fetchDeposit = async () => {
@@ -19,6 +24,18 @@ const Wallet = () => {
             setCode(withdraw_code)
             setCredit(deposit_amount)
             setDescription(description)
+
+        }).catch (({err}) => {
+            console.log(err)
+        })
+    }
+
+    const fetchWithdraw = async () => {
+        await http.get(`api/withdraw/${id}`).then(({data}) => {
+            const { withdraw_amount, withd_code, status } = data
+            setWithdrawAmount(withdraw_amount)
+            setWithdCode(withd_code)
+            setWithdrawStatus(status)
 
         }).catch (({err}) => {
             console.log(err)
@@ -88,6 +105,7 @@ const Wallet = () => {
 
     useEffect(() => {
         fetchDeposit()
+        fetchWithdraw()
     }, [])
 
     return (
