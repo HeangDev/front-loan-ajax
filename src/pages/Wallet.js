@@ -10,6 +10,7 @@ const Wallet = () => {
     const [credit, setCredit] = useState()
     const [code, setCode] = useState()
     const [description, setDescription] = useState()
+    const [depositStatus, setDepositStatus] = useState()
     const [withdrawCode, setWithdrawCode] = useState('')
 
     const [withdrawAmount, setWithdrawAmount] = useState()
@@ -20,11 +21,12 @@ const Wallet = () => {
 
     const fetchDeposit = async () => {
         await http.get(`api/deposit/${id}`).then(({data}) => {
-            const { withdraw_code, deposit_amount, description } = data
+            console.log(data)
+            const { withdraw_code, deposit_amount, description, status } = data
             setCode(withdraw_code)
             setCredit(deposit_amount)
             setDescription(description)
-
+            setDepositStatus(status)
         }).catch (({err}) => {
             console.log(err)
         })
@@ -119,10 +121,10 @@ const Wallet = () => {
                     <div className="left">
                         <h4 className="tit">จำนวนเงินที่ดำเนินการถอน (บาท)</h4>
                         {
-                            credit == '' || credit == null ?
+                            withdrawAmount == '' || withdrawAmount == null ?
                             <h3 className="des">{currencyFormat(0)}</h3>
                             :
-                            <h3 className="des">{currencyFormat(credit)}</h3>
+                            <h3 className="des">{currencyFormat(withdrawAmount)}</h3>
                         }
                     </div>
                     <div className="right">
@@ -147,7 +149,7 @@ const Wallet = () => {
                 </div>
                 </div>
                 <div className="withdraw_des">
-                    <p className="tit_note">สถานะการกู้: {description === 'กำหลังดำเนินการ' ? 'กำหลังดำเนินการ' : description }</p>
+                    <p className="tit_note">สถานะการกู้: {depositStatus === '1' ? description : withdrawStatus }</p>
                     <p>คำเตือน:<br /></p>
                     <p className="txt_note">
                         <img src={Safe_icon} alt="" /> 

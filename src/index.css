@@ -140,7 +140,7 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .withdraw_des .tit_note{@apply text-center text-red-500}
 .withdraw_des p{@apply text-center text-gray-400;}
 .withdraw_des .txt_note{@apply flex justify-between}
-.withdraw_des p img{@apply flex justify-start h-[28px] w-[30px] ml-[5px];}
+.withdraw_des p img{@apply flex justify-start h-[28px] w-[30px] mr-[5px];}
 .withdraw_des p span{@apply font-[11px];}
 .withdraw_wrap .btn_wrap{@apply flex-row flex-nowrap;}
 .withdraw_wrap .input_wrap{@apply px-[15px];}
