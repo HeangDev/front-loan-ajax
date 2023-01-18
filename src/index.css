@@ -38,8 +38,9 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .amount_warp .new_amount{@apply mt-[5px] text-[20px] text-center;}
 
 .total_wrap{@apply flex items-center justify-between border-t border-b border-[#eee] p-[15px];}
-.total_text{@apply h-[16px] text-[14px] text-[#666] leading-[16px];}
-.total_loan .total_sub{@apply ml-[5px] text-[12px] text-[#999];}
+.total_text{@apply h-[16px] text-[12px] text-[#666] leading-[16px];}
+.total_loan .monthly_pay{@apply text-[14px] font-semibold;}
+.total_loan .total_sub{@apply ml-[5px] text-[10px] text-[#999];}
 
 .loan_wrap{@apply py-[10px];}
 .loan_wrap marquee{@apply w-full h-[24px] text-[16px] text-center;}
