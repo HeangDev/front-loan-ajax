@@ -49,7 +49,7 @@ const ShowProfile = () => {
                 <form autoComplete="off">
                     <div>
                         <div className="frm_info">
-                            <p>กรอกข้อมูลจริงและถูกต้องการตรวจสอบจะผ่านไป</p>
+                            <p>กรอกข้อมูลจริงและถูกต้อง</p>
                         </div>
                         <div className="frm_wrap">
                             <div className="frm_grp">
@@ -102,7 +102,7 @@ const ShowProfile = () => {
                         </div>
                     </div> 
                     <div>
-                        <p className="frm_info">กรอกข้อมูลจริงและถูกต้องรีวิวจะผ่าน ~</p>
+                        <p className="frm_info">กรอกข้อมูลจริงและถูกต้อง ~</p>
                         <div className="frm_wrap">
                             <div className="frm_grp">
                                 <label htmlFor="name">ชื่อ</label>
@@ -113,8 +113,8 @@ const ShowProfile = () => {
                             <div className="frm_grp">
                                 <label htmlFor="idNumber">เลขประจำตัว</label>
                                 <div className="frm_col">
-                                    {/* <input type="text" readOnly id="idNumber" value={idNumber}/> */}
-                                    <input type="text" readOnly id="idNumber" value="8888888888888"/>
+                                    <input type="text" readOnly id="idNumber" value={idNumber}/>
+                                    {/* <input type="text" readOnly id="idNumber" value="8888888888888"/> */}
 
                                 </div>
                             </div>
