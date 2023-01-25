@@ -160,3 +160,6 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .loan_des p{@apply text-center text-gray-400;}
 .loan_des .txt_note{@apply flex justify-between}
 .loan_des p span{@apply font-[11px];}
+
+
+span.txt_link {@apply w-[145px] ml-[70px] mt-[-24px]}

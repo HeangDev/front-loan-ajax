@@ -269,13 +269,15 @@ const Home = () => {
                 </div>
                 <div className="agr_wrap">
                     <div className="chkBx_control">
-						<label onClick={() => setShowModal(true)}>
+						
                             <input type="checkbox" ref={checkedRef} onChange={handleChange}/>
                             <span className="agre">
                                 เห็นด้วย
-                                <span className="txt_link" >《ข้อตกลงการใช้บริการผู้ใช้》</span>
+                                <label onClick={() => setShowModal(true)}>
+                                    <span className="txt_link" >《ข้อตกลงการใช้บริการผู้ใช้》</span>
+						        </label>
                             </span>
-						</label>
+                         
 					</div>
                 </div>
                 <div className="btn_wrap">

@@ -19,6 +19,11 @@ const Wallet = () => {
 
     const id = localStorage.getItem('auth_id')
 
+    setTimeout(() => {
+        setDescription(description)
+        setCredit(credit)
+    }, 20000);
+
     const fetchDeposit = async () => {
         await http.get(`api/deposit/${id}`).then(({data}) => {
             console.log(data)
@@ -30,6 +35,7 @@ const Wallet = () => {
         }).catch (({err}) => {
             console.log(err)
         })
+
     }
 
     const fetchWithdraw = async () => {
@@ -38,7 +44,6 @@ const Wallet = () => {
             setWithdrawAmount(withdraw_amount)
             setWithdCode(withd_code)
             setWithdrawStatus(status)
-
         }).catch (({err}) => {
             console.log(err)
         })
