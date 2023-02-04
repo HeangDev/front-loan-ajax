@@ -15,6 +15,7 @@ import LoanReport from './pages/account/report/Loan'
 import ChangePassword from './pages/account/ChangePassword';
 import AccountInfo from './pages/info/AccountInfo'
 
+import AddBank from './pages/info/info/AddBank';
 import AddProfile from './pages/info/info/AddProfile';
 import ShowProfile from './pages/info/info/ShowProfile';
 
@@ -35,6 +36,8 @@ const App = () => {
                         <Route path="/loan" element={<LoanReport />} />
                         <Route path="/change-password" element={<ChangePassword />} />
                         <Route path="/info" element={<AccountInfo />} />
+
+                        <Route path="/bankinfo" element={<AddBank />} />
                         <Route path="/profileinfo" element={<AddProfile />} />
                         <Route path="/showinfo" element={<ShowProfile />} />
                         <Route path="/signature" element={<AddSignature />} />
