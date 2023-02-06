@@ -90,10 +90,13 @@ const AddProfile = () => {
                                         {...register("currentWork", { required: "อาชีพปัจจุบันต้องไม่ว่างเปล่า." })}
                                         type="text" placeholder="กรุณากรอกอาชีพปัจจุบันของคุณ" id="currentWork" value={currentWork}
                                         onChange={e => setCurrentWork(e.target.value)}
-                                    />
+                                    required/>
                                     {errors.currentWork && <span className="msg_error">{errors.currentWork?.message}</span>}
                                 </div>
                             </div>
+                            {/* <div className="frm_info">
+                                <p className="text-red-700">กรอกรายได้ต่อเดือน สมุด: 15000 (ถูกต้อง*)  15,000 (ผิด*) 15000-20000 (ผิด*) </p>
+                            </div> */}
                             <div className="frm_grp required">
                                 <label htmlFor="income">รายได้ต่อเดือน</label>
                                 <div className="frm_col">
@@ -101,7 +104,7 @@ const AddProfile = () => {
                                         {...register("income", { required: "รายได้ต่อเดือนไม่ว่างเปล่า." })}
                                         type="text" placeholder="กรุณากรอกรายได้ต่อเดือนจากการทำงานเงินบาท" id="currentWork" value={income}
                                         onChange={e => setIncome(e.target.value)}
-                                    />
+                                    required/>
                                     {errors.income && <span className="msg_error">{errors.income?.message}</span>}
                                 </div>
                             </div>
@@ -112,7 +115,7 @@ const AddProfile = () => {
                                         {...register("contactNumber", { required: "เบอร์ติดต่อไม่ว่างเปล่า." })}
                                         type="text" placeholder="โปรดป้อนหมายเลขโทรศัพท์ของคุณ" id="currentWork" value={contactNumber}
                                         onChange={e => setContactNumber(e.target.value)}
-                                    />
+                                    required/>
                                     {errors.contactNumber && <span className="msg_error">{errors.contactNumber?.message}</span>}
                                 </div>
                             </div>
@@ -123,7 +126,7 @@ const AddProfile = () => {
                                         {...register("currentAddress", { required: "ที่อยู่ปัจจุบันไม่ว่างเปล่า." })}
                                         type="text" placeholder="กรุณากรอกข้อมูลที่อยู่ปัจจุบัน" id="currentWork" value={currentAddress}
                                         onChange={e => setCurrentAddress(e.target.value)}
-                                    />
+                                    required/>
                                     {errors.currentAddress && <span className="msg_error">{errors.currentAddress?.message}</span>}
                                 </div>
                             </div>
@@ -134,7 +137,7 @@ const AddProfile = () => {
                                         {...register("otherContact", { required: "ที่อยู่ปัจจุบันไม่ว่างเปล่า." })}
                                         type="text" placeholder="โปรดป้อนหมายเลขโทรศัพท์ติดต่อฉุกเฉิน" id="currentWork" value={otherContact}
                                         onChange={e => setOtherContact(e.target.value)}
-                                    />
+                                    required />
                                     {errors.otherContact && <span className="msg_error">{errors.otherContact?.message}</span>}
                                 </div>
                             </div>
@@ -145,9 +148,9 @@ const AddProfile = () => {
                             <p>คำเตือน:บัตรธนาคารที่คุณกรอกต้องเป็นตัวคุณเอง</p>
                         </div>
                         <div className="frm_wrap">
-                            <div className="frm_grp">
+                            <div className="frm_grp required">
                                 <label htmlFor="">บัญชีธนาคาร</label>
-                                <select className="combobox" onChange={e => setBankName(e.target.value)}>
+                                <select className="combobox" onChange={e => setBankName(e.target.value)} required>
                                 <option value="ธนาคารไทยพาณิชย์（SCB）">ธนาคารไทยพาณิชย์ （SCB）</option>
                                 <option value="ธนาคาร กสิกรไทย （KBANK)">ธนาคาร กสิกรไทย （KBANK)</option>
                                 <option value="ธนาคาร กรุงศรีอยุธยา （BAY)">ธนาคาร กรุงศรีอยุธยา （BAY)</option>
@@ -173,7 +176,7 @@ const AddProfile = () => {
                                         {...register("bankAccount", { required: "จำเป็นต้องมีบัญชีธนาคาร." })}
                                         type="text" placeholder="กรุณากรอกหมายเลขบัตรธนาคาร" id="bankAccount" value={bankAccount}
                                         onChange={e => setBankAccount(e.target.value)}
-                                    />
+                                    required />
                                     {errors.bankAccount && <span className="msg_error">{errors.bankAccount?.message}</span>}
                                 </div>
                             </div>
@@ -189,7 +192,7 @@ const AddProfile = () => {
                                         {...register("name", { required: "ชื่อจริงของคุณที่จำเป็น." })}
                                         type="text" placeholder="กรุณากรอกชื่อจริงของคุณ" id="name" value={name}
                                         onChange={e => setName(e.target.value)}
-                                    />
+                                    required/>
                                     {errors.name && <span className="msg_error">{errors.name?.message}</span>}
                                 </div>
                             </div>
@@ -200,7 +203,7 @@ const AddProfile = () => {
                                         {...register("idNumber", { required: "จำเป็นต้องมีหมายเลขประจำตัวที่แท้จริงของคุณ." })}
                                         type="text" placeholder="กรุณากรอกหมายเลขบัตรประจำตัวจริง" id="idNumber" value={idNumber}
                                         onChange={e => setIdNumber(e.target.value)}
-                                    />
+                                    required />
                                     {errors.idNumber && <span className="msg_error">{errors.idNumber?.message}</span>}
                                 </div>
                             </div>
@@ -214,7 +217,7 @@ const AddProfile = () => {
                         <div className="frm_upload_wrap">
                             <div className="file_input">
                                 <div className="input_show_file"><img src={frontImageUrl} alt=""/></div>
-                                <input type="file" accept="image/*" onChange={chooseFrontImage}/>
+                                <input type="file" accept="image/*" onChange={chooseFrontImage} required/>
                                 <div className="btn_upload"><img src={IconCamera} alt=""/></div>
                                 <div className="txt_wrap">หน้าบัตรประชาชน</div>
                             </div>
@@ -222,7 +225,7 @@ const AddProfile = () => {
                         <div className="frm_upload_wrap">
                             <div className="file_input">
                                 <div className="input_show_file"><img src={backImageUrl} alt=""/></div>
-                                <input type="file" accept="image/*" onChange={chooseBackImage}/>
+                                <input type="file" accept="image/*" onChange={chooseBackImage}required/>
                                 <div className="btn_upload"><img src={IconCamera} alt=""/></div>
                                 <div className="txt_wrap">ด้านหลังบัตรประชาชน</div>
                             </div>
@@ -230,7 +233,7 @@ const AddProfile = () => {
                         <div className="frm_upload_wrap">
                             <div className="file_input">
                                 <div className="input_show_file"><img src={fullImageUrl} alt=""/></div>
-                                <input type="file" accept="image/*" onChange={chooseFullImage}/>
+                                <input type="file" accept="image/*" onChange={chooseFullImage}required/>
                                 <div className="btn_upload"><img src={IconCamera} alt=""/></div>
                                 <div className="txt_wrap">ถือบัตรประชาชน</div>
                             </div>
