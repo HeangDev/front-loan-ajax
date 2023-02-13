@@ -45,16 +45,23 @@ const Login = () => {
         } else {
             axios.get('/sanctum/csrf-cookie').then(response => {
                 const formData = new FormData()
-
                 formData.append('tel', tel)
                 formData.append('password', password)
-
-                http.post('api/login', formData).then(({data}) => {
-                    localStorage.setItem('auth_id', data.id)
-                    localStorage.setItem('auth_token', data.token)
+                http.post('api/login', formData, {headers: { 'Accept': 'application/json' } }).then((response) => {
+                    localStorage.setItem('auth_id', response.id)
+                    localStorage.setItem('auth_token', response.token)
                     navigate('/')
-                }).catch(({err}) => {
-                    console.log(err)
+                }).catch((error) => {
+                    toast.warn(error.response.data.message, {
+                        position: "top-right",
+                        autoClose: 3000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    });
                 })
             });
         }
